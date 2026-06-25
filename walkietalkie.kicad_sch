@@ -2472,10 +2472,28 @@
 		)
 	)
 	(junction
+		(at 148.09 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "23d188cf-7892-42eb-9bb9-974c0fc97757")
+	)
+	(junction
 		(at 121.17 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "28f6d38e-5530-431a-ba61-0ab2348390db")
+	)
+	(junction
+		(at 148.09 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48b379de-1764-402c-b1bc-10b2b3d9edef")
+	)
+	(junction
+		(at 148.09 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5681d7e0-4d23-41b0-aaa5-0da300980fdc")
 	)
 	(junction
 		(at 121.17 90.17)
@@ -2512,6 +2530,74 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c121d0bd-57a2-468b-b6ab-f4c414b7734d")
+	)
+	(junction
+		(at 121.17 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cf1580b0-704c-4bec-abe8-2dd59f39f56e")
+	)
+	(junction
+		(at 148.09 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d014e448-af36-49c6-8e98-c9b378c33594")
+	)
+	(no_connect
+		(at 152.4 88.9)
+		(uuid "418dc6ec-6e9b-49d3-a0d5-156723bff59c")
+	)
+	(no_connect
+		(at 158.75 72.39)
+		(uuid "72786a8b-21d0-4fc9-a88e-169272247a74")
+	)
+	(no_connect
+		(at 119.38 58.42)
+		(uuid "79af1798-cde3-44de-97b4-9336f08648d4")
+	)
+	(no_connect
+		(at 113.03 31.75)
+		(uuid "83cd5afd-d572-4865-8380-44c15490050b")
+	)
+	(no_connect
+		(at 95.25 31.75)
+		(uuid "9e265e4d-ee90-45dd-90e6-2f8c1101297f")
+	)
+	(no_connect
+		(at 116.84 58.42)
+		(uuid "9e4b076b-dfa8-442c-afa2-8e6cad45612b")
+	)
+	(no_connect
+		(at 86.36 58.42)
+		(uuid "a063b635-38b4-41e8-9160-301de5e3390f")
+	)
+	(no_connect
+		(at 118.11 82.55)
+		(uuid "a4eaad2d-f484-4f00-9e4e-e6fe6a4ec133")
+	)
+	(no_connect
+		(at 99.06 58.42)
+		(uuid "bc71d58c-eb6e-41a2-9429-c6ccc5fd6404")
+	)
+	(no_connect
+		(at 152.4 86.36)
+		(uuid "ca68917f-d26f-4784-ba4e-59c3d88d20b4")
+	)
+	(no_connect
+		(at 152.4 93.98)
+		(uuid "de206f34-bf78-42b0-bbd8-2e4d4f61cbd9")
+	)
+	(no_connect
+		(at 92.71 31.75)
+		(uuid "e501d91a-9dfb-48a6-a83d-66feafd70b33")
+	)
+	(no_connect
+		(at 152.4 91.44)
+		(uuid "e6222489-71b2-48fc-a122-a112b4798a24")
+	)
+	(no_connect
+		(at 83.82 58.42)
+		(uuid "ef1bac20-2c0f-4945-b531-4066d7786c08")
 	)
 	(wire
 		(pts
@@ -2645,6 +2731,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.09 91.44) (xy 152.4 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48803a22-27ad-4d32-a8f8-c6056824a3ee")
+	)
+	(wire
+		(pts
 			(xy 165.1 38.1) (xy 166.37 38.1)
 		)
 		(stroke
@@ -2665,16 +2761,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 58.42) (xy 88.9 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "517daecc-db3b-4f3b-84d3-2b7c3c273d8e")
-	)
-	(wire
-		(pts
 			(xy 45.72 21.59) (xy 45.72 25.4)
 		)
 		(stroke
@@ -2682,6 +2768,16 @@
 			(type default)
 		)
 		(uuid "527a40de-63e0-443c-ad24-516448887d0a")
+	)
+	(wire
+		(pts
+			(xy 148.09 93.98) (xy 152.4 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fce1815-7363-4ac4-8855-899484213d12")
 	)
 	(wire
 		(pts
@@ -2745,6 +2841,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 86.36) (xy 148.09 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70c7d3b8-bfa5-45b3-ab7a-6a00a60fdf24")
+	)
+	(wire
+		(pts
 			(xy 106.68 58.42) (xy 106.68 60.96)
 		)
 		(stroke
@@ -2772,6 +2878,16 @@
 			(type default)
 		)
 		(uuid "71a68c44-a5e1-4a51-bd65-ab2fd581476b")
+	)
+	(wire
+		(pts
+			(xy 147.32 91.44) (xy 148.09 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "793cb693-f05e-4737-afce-a296ed81ff19")
 	)
 	(wire
 		(pts
@@ -2825,6 +2941,16 @@
 	)
 	(wire
 		(pts
+			(xy 148.09 86.36) (xy 152.4 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fa63e42-790e-451e-a83e-bdc00a0a0e49")
+	)
+	(wire
+		(pts
 			(xy 82.55 96.52) (xy 83.82 96.52)
 		)
 		(stroke
@@ -2832,6 +2958,16 @@
 			(type default)
 		)
 		(uuid "92628315-c471-48ae-a14a-340a2156d726")
+	)
+	(wire
+		(pts
+			(xy 118.11 82.55) (xy 121.17 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9994fad5-c75c-49b3-9d3f-f543b1614c46")
 	)
 	(wire
 		(pts
@@ -2875,6 +3011,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 88.9) (xy 148.09 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a60a3b80-9d15-4081-a398-4b0d93c15af4")
+	)
+	(wire
+		(pts
 			(xy 60.96 60.96) (xy 59.69 60.96)
 		)
 		(stroke
@@ -2902,6 +3048,16 @@
 			(type default)
 		)
 		(uuid "adbeef64-4272-4b51-b0f4-1129cded33e6")
+	)
+	(wire
+		(pts
+			(xy 121.17 82.55) (xy 121.92 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2d762ed-6b08-41ef-bef3-613832404ff6")
 	)
 	(wire
 		(pts
@@ -3072,6 +3228,36 @@
 			(type default)
 		)
 		(uuid "f3d30650-55ee-4b3b-99fb-a12c7acef3b7")
+	)
+	(wire
+		(pts
+			(xy 88.9 58.42) (xy 88.9 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f505ac12-f5cc-40b2-a190-df35bfe38d56")
+	)
+	(wire
+		(pts
+			(xy 147.32 93.98) (xy 148.09 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9bf5df9-1aae-4ba8-840d-5f55132fcbba")
+	)
+	(wire
+		(pts
+			(xy 148.09 88.9) (xy 152.4 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc4d0456-1d98-4bc5-98a3-dfef4ea70bdd")
 	)
 	(wire
 		(pts
@@ -3652,7 +3838,7 @@
 				)
 			)
 		)
-		(property "Footprint" "GLYPHC6:GLYPH-C6"
+		(property "Footprint" "pcbcupid_footprint:glyph-s3"
 			(at 215.9 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -3967,7 +4153,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Audiocodec_foot:Audio_codec"
+		(property "Footprint" "pcbcupid_footprint:gmod-audio_codec"
 			(at 181.61 46.228 0)
 			(hide yes)
 			(show_name no)
@@ -4633,7 +4819,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c90820fd-9d98-444b-9a29-f1d592ccb587")
-		(property "Reference" "Brd1"
+		(property "Reference" "U6"
 			(at 52.07 33.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4655,7 +4841,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "kicadfoots:128x64OLED"
 			(at 44.45 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -4703,7 +4889,7 @@
 		(instances
 			(project "walkietalkie"
 				(path "/854fcae4-cd44-47a2-ba54-607c4250508c"
-					(reference "Brd1")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -4720,8 +4906,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc17c123-93b8-49d3-ac77-479d806a167b")
-		(property "Reference" "1"
-			(at 97.028 93.472 0)
+		(property "Reference" "U5"
+			(at 99.06 93.726 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4742,7 +4928,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "KY-040:KY-040-PORT"
+		(property "Footprint" "kicadfoots:KY-040-PORT"
 			(at 93.98 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -4793,7 +4979,7 @@
 		(instances
 			(project "walkietalkie"
 				(path "/854fcae4-cd44-47a2-ba54-607c4250508c"
-					(reference "1")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -4889,7 +5075,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e717db5d-7fe3-4221-b470-71c1db689f26")
-		(property "Reference" "SW2"
+		(property "Reference" "SW1"
 			(at 160.02 30.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4899,7 +5085,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "PTT"
 			(at 160.02 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4909,7 +5095,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_THT:SW_SPST_Omron_B3F-315x_Angled"
 			(at 160.02 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -4951,7 +5137,7 @@
 		(instances
 			(project "walkietalkie"
 				(path "/854fcae4-cd44-47a2-ba54-607c4250508c"
-					(reference "SW2")
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -5067,7 +5253,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "pcbcupid_footprint:gsense-microphone_2ch"
 			(at 34.29 57.15 0)
 			(hide yes)
 			(show_name no)
