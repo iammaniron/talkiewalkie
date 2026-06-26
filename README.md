@@ -43,6 +43,57 @@ A portable 2.4 GHz digital walkie-talkie — designed with KiCad. TalkieWalkie i
 | Power rails | +3.3 V, GND |
 | Battery | 1× 18650 Li-Ion (3.7 V nominal) |
 
+## System Architecture
+
+```
+┌─────────────────────────────────────────────────────┐
+│                    TalkieWalkie                      │
+│                                                      │
+│  ┌──────────┐   ┌──────────┐   ┌───────────────┐   │
+│  │ 18650    │──▶│ GLYPH-S3 │◀──│ OLED 0.91"    │   │
+│  │ Battery  │   │  (MCU)   │   │ (I²C Display) │   │
+│  └──────────┘   └─┬──┬──┬──┘   └───────────────┘   │
+│                   │  │  │                           │
+│         ┌─────────┘  │  └──────────┐               │
+│         ▼            ▼             ▼               │
+│  ┌───────────┐ ┌──────────┐ ┌───────────┐         │
+│  │ nRF24L01  │ │ NAU8325  │ │ MicroSD   │         │
+│  │ 2.4GHz RF │ │ Audio    │ │ Storage   │         │
+│  └───────────┘ │ Codec    │ └───────────┘         │
+│                └────┬─────┘                        │
+│                     │                              │
+│                ┌────▼─────┐                        │
+│                │ Dual-MIC │                        │
+│                │ Gsense   │                        │
+│                └──────────┘                        │
+│                                                      │
+│  ┌──────────┐                      ┌────────────┐  │
+│  │ RGB LED  │                      │ Debug/Exp  │  │
+│  │ (Status) │                      │ Headers    │  │
+│  └──────────┘                      └────────────┘  │
+└─────────────────────────────────────────────────────┘
+```
+
+### Signal Flow
+
+1. **TX Path**: Dual MEMS mics → NAU8325 ADC → GLYPH-S3 (encode/compress) → nRF24L01 (GFSK TX)
+2. **RX Path**: nRF24L01 (GFSK RX) → GLYPH-S3 (decode/decompress) → NAU8325 DAC → speaker/headphone out
+3. **Storage**: Audio streams can be recorded to MicroSD for later playback or logging
+4. **UI**: OLED shows channel, battery level, signal strength; RGB LED indicates TX/RX/standby
+
+## How It Works
+
+The GLYPH-S3 MCU orchestrates all peripherals over SPI and I²C buses. During transmission, the NAU8325 captures and digitizes audio from the dual MEMS microphones. The MCU encodes the PCM stream (potentially with compression) and packets it out over the nRF24L01 in the 2.4 GHz band. On the receive side, the nRF24L01 demodulates incoming packets, the MCU decodes the stream, and the NAU8325 drives an external speaker.
+
+The OLED provides a real-time interface showing channel selection, battery gauge, and link status. The RGB LED gives at-a-glance feedback — red for TX, green for RX, blue for idle/standby.
+
+### Protocol Considerations
+
+- nRF24L01 operates at up to 2 Mbps over-the-air data rate
+- Enhanced ShockBurst™ for automatic packet handling and acknowledgements
+- 125 RF channels (2.400 – 2.525 GHz), 1 MHz spacing
+- Payload up to 32 bytes per packet — requires audio stream segmentation
+
 ## Project Status
 
 - [x] Schematic design
