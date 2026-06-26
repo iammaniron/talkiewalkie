@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 3.2,
+          "height": 3.2,
+          "width": 3.2
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -261,6 +261,22 @@
   },
   "erc": {
     "erc_exclusions": [
+      [
+        "pin_not_connected|1600200|508000|295d48a3-ff86-4acb-8715-7e5d5ac907e4|00000000-0000-0000-0000-000000000000|/854fcae4-cd44-47a2-ba54-607c4250508c|/854fcae4-cd44-47a2-ba54-607c4250508c|",
+        ""
+      ],
+      [
+        "pin_not_connected|1600200|584200|29cb3085-6aac-4ac8-9a8e-8b0a1698bfb3|00000000-0000-0000-0000-000000000000|/854fcae4-cd44-47a2-ba54-607c4250508c|/854fcae4-cd44-47a2-ba54-607c4250508c|",
+        ""
+      ],
+      [
+        "pin_not_connected|1752600|508000|953ee34c-38ac-496e-a8e4-1140c021e87a|00000000-0000-0000-0000-000000000000|/854fcae4-cd44-47a2-ba54-607c4250508c|/854fcae4-cd44-47a2-ba54-607c4250508c|",
+        ""
+      ],
+      [
+        "pin_not_connected|1752600|584200|0b3250a0-0ec5-4105-848a-584f6068d27e|00000000-0000-0000-0000-000000000000|/854fcae4-cd44-47a2-ba54-607c4250508c|/854fcae4-cd44-47a2-ba54-607c4250508c|",
+        ""
+      ],
       [
         "pin_not_connected|914400|584200|ce571617-dad6-4d67-900e-2946c0b3fbe7|00000000-0000-0000-0000-000000000000|/854fcae4-cd44-47a2-ba54-607c4250508c|/854fcae4-cd44-47a2-ba54-607c4250508c|",
         ""
@@ -681,7 +697,7 @@
         "uuid": "854fcae4-cd44-47a2-ba54-607c4250508c"
       }
     ],
-    "used_designators": "",
+    "used_designators": "D1,U5,BT1,J1-3",
     "variants": []
   },
   "sheets": [
