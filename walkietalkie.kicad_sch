@@ -4114,6 +4114,18 @@
 		(uuid "cf1580b0-704c-4bec-abe8-2dd59f39f56e")
 	)
 	(no_connect
+		(at 53.34 124.46)
+		(uuid "44aefb5e-f356-4924-92ba-96cc25150e45")
+	)
+	(no_connect
+		(at 53.34 106.68)
+		(uuid "4fc72c2d-203c-4b06-92fc-27fe75517c19")
+	)
+	(no_connect
+		(at 53.34 119.38)
+		(uuid "67f31196-b8b7-4af1-8492-27b715438cf1")
+	)
+	(no_connect
 		(at 231.14 53.34)
 		(uuid "72786a8b-21d0-4fc9-a88e-169272247a74")
 	)
@@ -5840,7 +5852,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x05_P1.27mm_Horizontal"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 38.1 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -5929,7 +5941,7 @@
 				)
 			)
 		)
-		(property "Footprint" "pcbcupid_footprint:BAT_BK-18650-PC2"
+		(property "Footprint" "pcbcupidd_footprint:BatteryHolder_1042_1x18650"
 			(at 168.91 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -6694,7 +6706,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
 			(at 160.02 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -7086,7 +7098,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_JST:JST_XH_S2B-XH-A_1x02_P2.50mm_Horizontal"
 			(at 160.02 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -7326,7 +7338,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm-4_RGB"
 			(at 161.29 109.22 0)
 			(hide yes)
 			(show_name no)
