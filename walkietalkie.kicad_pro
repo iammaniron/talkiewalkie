@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 3.2,
-          "height": 3.2,
-          "width": 3.2
+          "drill": 0.0,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -261,6 +261,10 @@
   },
   "erc": {
     "erc_exclusions": [
+      [
+        "lib_symbol_mismatch|469900|673100|fb64ef1a-9786-4070-bac5-c1271bf26a80|00000000-0000-0000-0000-000000000000|||",
+        ""
+      ],
       [
         "pin_not_connected|1600200|508000|295d48a3-ff86-4acb-8715-7e5d5ac907e4|00000000-0000-0000-0000-000000000000|/854fcae4-cd44-47a2-ba54-607c4250508c|/854fcae4-cd44-47a2-ba54-607c4250508c|",
         ""
@@ -697,7 +701,7 @@
         "uuid": "854fcae4-cd44-47a2-ba54-607c4250508c"
       }
     ],
-    "used_designators": "J1-3,BT1,U5,D1",
+    "used_designators": "#FLG1,#PWR1-4,#PWR10,#PWR13-17,J1-3,BT1,U5,D1",
     "variants": []
   },
   "sheets": [
