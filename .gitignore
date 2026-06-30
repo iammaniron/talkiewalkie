@@ -1,0 +1,6 @@
+# KiCad lock files
+~*.lck
+
+# KiCad backup files
+*.kicad_*-bak
+*-backups/
