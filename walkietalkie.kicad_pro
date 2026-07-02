@@ -613,7 +613,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "the final gerber/",
       "specctra_dsn": "",
       "vrml": ""
     },
