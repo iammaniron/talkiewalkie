@@ -1,0 +1,167 @@
+#+TITLE: teleVox — A DIY Walkie Talkie
+#+AUTHOR: ManIron
+#+DATE: July 2026
+
+* The Story
+
+It started with a YouTube video.
+
+A friend and fellow creator was building a walkie talkie using Glyph
+boards. It worked — technically. But it was held together on a
+breadboard, and anyone who has worked with breadboards knows the
+struggle: loose connections, noise, wires everywhere, and the constant
+question of "why did it just stop working?"
+
+That video planted a seed.
+
+I had been wanting to learn PCB design for a while, and this felt like
+the perfect excuse. Instead of designing a full walkie talkie board
+from scratch — which would be insane for a first project — I could
+design a *carrier board*. A single board that brings the Glyph, the
+audio codec, the amplifier, the microphone, the battery management,
+and all the supporting circuitry together into one clean package.
+
+It seemed simple enough. A perfect beginner project. A great piece of
+content. Maybe a week of work.
+
+I was wrong. And I'm glad I was.
+
+What followed was one of the most intense, frustrating, and rewarding
+learning experiences I have ever had. I learned about schematics and
+how to read datasheets. I learned about component placement and why
+"just connect the pins" is not a routing strategy. I learned about
+power distribution, ground planes, decoupling capacitors, and why your
+microcontroller resets when the transmitter keys up if you get it
+wrong. I learned about buses, differential pairs, ERC and DRC errors,
+footprint libraries, design rules, manufacturing constraints, and a
+hundred other things I didn't even know existed two weeks earlier.
+
+There were moments when I felt completely stuck. Moments where I
+thought I had finished, only to realize I needed to tear something up
+and start over. I learned very quickly that a good schematic does not
+automatically become a good PCB. The schematic is the vision; the
+layout is where reality pushes back.
+
+Thankfully, I was not alone. I had mentors who patiently guided me
+through the process. Every time I thought I had figured something out,
+they would point out a better way, explain the reasoning behind it,
+and push me to think like an engineer, not just a hobbyist following a
+tutorial. They reviewed my designs, answered my questions at odd
+hours, and made sure I was heading in the right direction.
+
+Today, the board has officially been sent for manufacturing. Seeing
+the final design and clicking that "Order" button gave me goosebumps.
+Whether it works perfectly on the first try or needs revisions, I have
+already learned more than I ever expected.
+
+This is not just a PCB. It is proof that you can start from zero and
+build something real.
+
+* What is teleVox?
+
+teleVox is a DIY walkie talkie built around the [[https://www.instagram.com/reezen.xyz/][Glyph]] ecosystem. It is
+designed as a carrier board — a custom PCB that integrates off-the-shelf
+modules into a single, compact, battery-powered handheld device.
+
+The goal is simple: a walkie talkie that actually works reliably, with
+a proper PCB instead of a breadboard, enclosed in a 3D printed shell,
+powered by a rechargeable battery.
+
+* How It Works
+
+The system is built around these core blocks:
+
+- *Glyph C3* — the brain. An ESP32-C3 based development board that
+  handles the digital audio processing and wireless communication.
+- *Audio Codec (ES8388)* — converts analog audio from the microphone
+  to digital (ADC) and digital audio back to analog (DAC) for the
+  speaker.
+- *Microphone* — a MEMS microphone with on-board amplifier for clear
+  voice capture.
+- *Audio Amplifier (MAX98357)* — a Class-D amplifier that drives the
+  speaker with enough volume to be heard clearly.
+- *Battery Management* — a TP4056 based charging circuit with
+  protection, allowing the device to run on a single 18650 Li-Ion cell
+  and charge via USB-C.
+- *Power Regulation* — buck and boost converters to provide stable
+  3.3V and 5V rails from the battery.
+- *User Interface* — physical buttons for PTT (Push-To-Talk), volume,
+  and channel selection, plus status LEDs.
+- *3D Printed Enclosure* — a custom shell that houses everything in a
+  handheld form factor.
+
+* The Design
+
+The PCB was designed in [[https://www.kicad.org/][KiCad]], an open-source EDA tool. The design
+went through several iterations:
+
+1. *Schematic Capture* — drawing up the circuit, selecting components,
+   checking pinouts against datasheets, and running electrical rules
+   checks (ERC).
+2. *Component Placement* — arranging everything on the board for
+   minimal trace lengths, clean power delivery, and good thermal
+   performance.
+3. *Routing* — connecting all the nets. This was the hardest part.
+   Two-layer board, mixed-signal (audio and digital), careful ground
+   plane management, keeping audio traces away from switching noise.
+4. *Design Rule Checking (DRC)* — making sure the board meets
+   manufacturing constraints: trace width, clearance, via size,
+   silkscreen readability.
+5. *Gerber Generation* — exporting the manufacturing files and
+   sending them off to the fab.
+
+The board is a two-layer design with a solid ground plane on the
+bottom layer, star-ground topology for the audio section, and
+dedicated power pours for the high-current paths.
+
+* The Enclosure
+
+The teleVox enclosure is a 3D printed shell designed in Fusion 360:
+
+- Two-part clamshell design with screw bosses
+- Cutouts for the speaker grille, microphone port, buttons, and USB-C
+- Snap-fit battery compartment for easy cell swapping
+- Designed for FDM printing with minimal supports
+
+* Repository Structure
+
+- =walkietalkie.kicad_pro= — KiCad project file
+- =walkietalkie.kicad_sch= — Schematic
+- =walkietalkie.kicad_pcb= — PCB layout
+- =walkietalkie.kicad_prl= — Netlist / project locals
+- =the final gerber/= — Manufacturing files sent to the fab
+- =teleVox.glb= — 3D model of the device
+- =teleVox.step= — STEP file for the enclosure / mechanical integration
+- =.step= — Additional mechanical data
+
+* Acknowledgments
+
+This project would not have been possible without the people who took
+the time to teach, review, and guide. You know who you are — thank you
+for making me think like an engineer.
+
+Also huge thanks to the KiCad team for building incredible open-source
+tools, and to the ESP32 and audio communities for the libraries and
+reference designs that made this possible.
+
+* What's Next?
+
+The boards are at the fab. When they arrive:
+
+- Assembly and soldering
+- Bring-up and testing
+- Firmware development
+- Enclosure printing and fitting
+- Field testing
+
+If the first revision has issues — that's okay. That's part of the
+process. Each revision will be better than the last.
+
+* License
+
+This project is open-source hardware. Feel free to learn from it,
+modify it, and build your own.
+
+#+begin_quote
+Built with curiosity, caffeine, and KiCad.
+#+end_quote
